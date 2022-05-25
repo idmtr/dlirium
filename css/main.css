@@ -267,16 +267,22 @@ a.button-style3:hover,.button-parent-3 a:hover{
 	}
 .bg-style1{
 	background-color:#11344C;
-	background-image:url('http://i.imgur.com/RLqj99K.jpg');
+	background-image:url('https://i.imgur.com/RLqj99K.jpg');
 	background-repeat:repeat;
 	background-size:100%;
 	}
 .bg-style01{
 	background-color:#11344C;
-	background-image:url('http://i.imgur.com/33oSm06.jpg');
+	background-image:url('https://i.imgur.com/33oSm06.jpg');
 	background-repeat:repeat;
 	background-size:100%;
 	}
+.bg-gothic{
+	background-color:#11344C;
+	background-image:url('../img/trampstamp00.jpg');
+	background-repeat:repeat;
+	background-size:100%;
+}
 
 .bg-style001{
 	padding-top: 50px;
@@ -289,15 +295,9 @@ a.button-style3:hover,.button-parent-3 a:hover{
 
 .bg-style02{
 	background-color:#11344C;
-	background-image:url('http://i.imgur.com/RLqj99K.jpg');
+	background-image:url('https://i.imgur.com/RLqj99K.jpg');
 	background-repeat:repeat;
 	background-size:100%;
-	}
-.bg-style4{
-	background-color:#3522A9;
-	background-image:url('../img/bg1.png');
-	background-repeat:no-repeat;
-	background-position:center center;
 	}
 .bg-style2{
 	background-color:lightgray;
@@ -316,6 +316,18 @@ a.button-style3:hover,.button-parent-3 a:hover{
 	height:100%;
 	background-color:rgba(79,63,139,0.7);
 	}
+.bg-style4{
+	background-color:#3522A9;
+	background-image:url('../img/bg1.png');
+	background-repeat:no-repeat;
+	background-position:center center;
+	}
+.bg-style03{
+	background-color:#fc3936;
+	/*background-image:url('../img/chooski.jpg');*/
+	background-repeat:repeat;
+	background-size:100%;
+}
 .h-style1{
 	color:#ffffff;
 	font-weight:700;
@@ -603,14 +615,14 @@ color: #cd3f2e;
 
 }
 .models{
-	background-image: url('http://i.imgur.com/aVoPwtI.png');
+	background-image: url('https://i.imgur.com/aVoPwtI.png');
 	
 
 }
 
 a.models:hover{
 
-	background-image: url('http://i.imgur.com/823nDR9.png');
+	background-image: url('https://i.imgur.com/823nDR9.png');
 }
 
 .sub_tite1{
