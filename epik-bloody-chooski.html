@@ -61,7 +61,7 @@
             <!--<h2 class="h-style1 big-title">Dilirium</h2> --> 
             <a href="./"><img src="./img/chooski-dliriumr.png" class="Dlirium logo" /></a>
             <video loop muted autoplay playsinline id="video"></video>
-            <!-- <pre></pre> -->
+            <pre></pre>
             <h3 class="h-style2 small-title">Made Here, Not There <a style="color: blue;" target="_blank" href="https://www.instagram.com/explore/tags/dliriumbrand/"><img src="./img/insta.png">#DliriumBrand</a></h3>
               <!-- <div class="t-center">
                 <a class="button  button-style1" href="https://dliriumbrand.com"> Главна</a>
@@ -117,17 +117,17 @@
                 <th>46</th>
               </tr>
               <tr>
-                <td>1</td> <!-- 36 -->
-                <td>2</td> <!-- 37 -->
-                <td>1</td> <!-- 38 -->
-                <td>4</td> <!-- 39 -->
+                <td>0</td> <!-- 36 -->
+                <td>0</td> <!-- 37 -->
+                <td>0</td> <!-- 38 -->
+                <td>0</td> <!-- 39 -->
                 <td>0</td> <!-- 40 -->
-                <td>1</td> <!-- 41 -->
-                <td>1</td> <!-- 42 -->
-                <td>5</td> <!-- 43 -->
-                <td>1</td> <!-- 44 -->
-                <td>1</td> <!-- 45 -->
-                <td>1</td> <!-- 46 -->
+                <td>0</td> <!-- 41 -->
+                <td>0</td> <!-- 42 -->
+                <td>0</td> <!-- 43 -->
+                <td>0</td> <!-- 44 -->
+                <td>0</td> <!-- 45 -->
+                <td>0</td> <!-- 46 -->
               </tr>
               </table>
           </div>
@@ -217,13 +217,13 @@
     </script>
     <script type="text/javascript">
       var vid = "hPsfSmlBEzg", // "iGpuQ0ioPrM",
-    streams,
-    video_focused = true,
-    video_tag = $("#video"),
-    video_obj = video_tag.get(0);
-$.get("https://images"+~~(Math.random()*33)+"-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https%3A%2F%2Fwww.youtube.com%2Fget_video_info%3Fvideo_id%3D" + vid, function(data) {
-console.log(data);
-    if (data) {
+      streams,
+      video_focused = true,
+      video_tag = $("#video"),
+      video_obj = video_tag.get(0);
+      $.get("https://images"+~~(Math.random()*33)+"-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https%3A%2F%2Fwww.youtube.com%2Fget_video_info%3Fvideo_id%3D" + vid, function(data) {
+      console.log(data);
+      if (data) {
         streams = parse_youtube_meta(data);
         video_tag.attr({
             src: streams['1080p'] || streams['720p'] || streams['360p']
