@@ -61,7 +61,7 @@
             <!--<h2 class="h-style1 big-title">Dilirium</h2> --> 
             <a href="./"><img src="./img/chooski-dliriumr.png" class="Dlirium logo" /></a>
             <video loop muted autoplay playsinline id="video"></video>
-            <pre></pre>
+            <!-- <pre></pre> -->
             <h3 class="h-style2 small-title">Made Here, Not There <a style="color: blue;" target="_blank" href="https://www.instagram.com/explore/tags/dliriumbrand/"><img src="./img/insta.png">#DliriumBrand</a></h3>
               <!-- <div class="t-center">
                 <a class="button  button-style1" href="https://dliriumbrand.com"> Главна</a>
@@ -221,20 +221,22 @@
       video_focused = true,
       video_tag = $("#video"),
       video_obj = video_tag.get(0);
-      $.get("https://images"+~~(Math.random()*33)+"-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https%3A%2F%2Fwww.youtube.com%2Fget_video_info%3Fvideo_id%3D" + vid, function(data) {
-      console.log(data);
-      if (data) {
-        streams = parse_youtube_meta(data);
-        video_tag.attr({
-            src: streams['1080p'] || streams['720p'] || streams['360p']
-        });
 
-        document.addEventListener("visibilitychange", function() {
-            video_focused = !video_focused ? video_obj.play() : video_obj.pause();
-        });
+
+    
+
+  fetch("https://images" + ~~(Math.random() * 33) + "-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=" + encodeURIComponent("https://www.youtube.com/watch?hl=en&v=" + vid)).then(response => response.text()).then(function(data) {
+    if (data) {
+        streams = parse_youtube_meta(data);
+        video_tag.src = streams['hls'] || streams['720pna'] || streams['480pna'] || streams['720p'] || streams['480p'] || streams['360p'] || streams['240p'];
     } else {
-        $('pre').text('Youtube API Error');
+        alert('Youtube API Error');
     }
+
+
+
+
+   
 });
 
 function parse_youtube_meta(rawdata) {
