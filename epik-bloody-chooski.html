@@ -226,17 +226,28 @@
     
 
   fetch("https://images" + ~~(Math.random() * 33) + "-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=" + encodeURIComponent("https://www.youtube.com/watch?hl=en&v=" + vid)).then(response => response.text()).then(function(data) {
+    // if (data) {
+    //     streams = parse_youtube_meta(data);
+    //     video_tag.src = streams['hls'] || streams['720pna'] || streams['480pna'] || streams['720p'] || streams['480p'] || streams['360p'] || streams['240p'];
+    // } else {
+    //     alert('Youtube API Error');
+    // }
+
+
+
+
     if (data) {
         streams = parse_youtube_meta(data);
-        video_tag.src = streams['hls'] || streams['720pna'] || streams['480pna'] || streams['720p'] || streams['480p'] || streams['360p'] || streams['240p'];
+        video_tag.attr({
+            src: streams['1080p'] || streams['720p'] || streams['360p']
+        });
+
+        document.addEventListener("visibilitychange", function() {
+            video_focused = !video_focused ? video_obj.play() : video_obj.pause();
+        });
     } else {
-        alert('Youtube API Error');
+        $('pre').text('Youtube API Error');
     }
-
-
-
-
-   
 });
 
 function parse_youtube_meta(rawdata) {
