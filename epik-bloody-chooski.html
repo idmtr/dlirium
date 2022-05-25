@@ -286,15 +286,15 @@ function parse_youtube_meta(rawdata) {
     return result;
 };
 
-function parse_str(str) {
-    return str.split('&').reduce(function(params, param) {
-        var paramSplit = param.split('=').map(function(value) {
-            return decodeURIComponent(value.replace('+', ' '));
-        });
-        params[paramSplit[0]] = paramSplit[1];
-        return params;
-    }, {});
-}
+// function parse_str(str) {
+//     return str.split('&').reduce(function(params, param) {
+//         var paramSplit = param.split('=').map(function(value) {
+//             return decodeURIComponent(value.replace('+', ' '));
+//         });
+//         params[paramSplit[0]] = paramSplit[1];
+//         return params;
+//     }, {});
+// }
 
 
     </script>
